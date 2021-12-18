@@ -1,0 +1,75 @@
+﻿@model MobilesProject.Models.Delivery
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Delivery</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cart.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cart.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shipping.ShippingCarrier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shipping.ShippingCarrier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shipping.ExpectedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shipping.ExpectedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shipping.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shipping.Location)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @{
+        if (User.Identity.Name.Equals("admin@admin.com"))
+        {
+            @Html.ActionLink("Back to List", "../Admin/Index") <span>|</span>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+        }
+        else
+        {
+            @Html.ActionLink("Back to My Carts", "Index", "Carts")
+        }
+    }
+</p>

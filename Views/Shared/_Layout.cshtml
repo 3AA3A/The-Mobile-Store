@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+
+            <div class="navbar-collapse collapse">
+
+
+
+                <ul class="nav navbar-nav">
+
+                    <li>
+                        <img src="~/Content/Image/banner.png" height="50" width="50" alt="">
+                    </li>
+                    <li>
+                        <a href="/Home">The Mobile Company</a>
+                    </li>
+                    <li>@Html.ActionLink("Products", "Index", "Products")</li>
+                    @{
+                        if (User.Identity.Name.Equals("admin@admin.com"))
+                        {
+                            <li>@Html.ActionLink("View all Data", "Index", "Admin")</li>
+                            /*<li>@Html.ActionLink("All Carts", "Index", "CartsAdmin")</li>
+                            <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
+                                <div class="dropdown-menu" aria-labelledby="themes">
+                                    <a class="dropdown-item">@Html.ActionLink("FAQ's", "Index", "Faqs")</a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item">@Html.ActionLink("Reviews", "Index", "Reviews")</a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item">@Html.ActionLink("Inventory", "Index", "Inventories")</a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item">@Html.ActionLink("Deliveries", "Index", "Deliveries")</a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item">@Html.ActionLink("Suppliers", "Index", "Suppliers")</a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item">@Html.ActionLink("Shipping", "Index", "Shippings")</a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item">@Html.ActionLink("Coupons", "Index", "Coupons")</a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item">@Html.ActionLink("Categories", "Index", "Categories")</a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item">@Html.ActionLink("Wishlists", "Index", "Wishlists")</a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item">@Html.ActionLink("Histories", "Index", "Histories")</a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item">@Html.ActionLink("Payments", "Index", "Payments")</a>
+
+                                </div>
+                            </li>*/
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("My Cart", "MyCart", "Transaction")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
+                                <div class="dropdown-menu" aria-labelledby="themes">
+                                    <a class="dropdown-item">@Html.ActionLink("FAQ's", "Index", "Faqs")</a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item">@Html.ActionLink("Reviews", "Index", "Reviews")</a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item">@Html.ActionLink("Wishlists", "Index", "Wishlists")</a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item">@Html.ActionLink("Histories", "Index", "Histories")</a>
+
+
+                                </div>
+                            </li>
+
+                        }
+                    }
+
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+
+        </div>
+
+    </div>
+    <img src="~/Content/Image/topbanner.jpg" height="100" width="100%" alt="">
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p><img src="~/Content/Image/banner.png" height="60" width="60" /> &copy; @DateTime.Now.Year - The Mobile Company </p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

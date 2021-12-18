@@ -1,0 +1,109 @@
+﻿@model MobilesProject.Models.Payment
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Cart Payment</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Payment</h4>
+    <p class="alert-danger">
+        @ViewBag.error
+    </p>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @*@Html.LabelFor(model => model.CartId, "CartId", htmlAttributes: new { @class = "control-label col-md-2" })*@
+        <div class="col-md-10">
+            @{ var cartid = @TempData["CartId"];}
+            @*@cartid*@
+            @Html.Hidden("CartId", cartid)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{
+                List<string> Type = new List<string> { "CreditCard", "Check" };
+            }
+            @Html.DropDownList("Type", new SelectList(Type), htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{ var amount = @TempData["amount"];}
+            @amount
+            @Html.Hidden("Amount", amount)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Discount, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{ var discount = @TempData["discount"];}
+            @discount
+            @Html.Hidden("Discount", discount)
+            @{ if (discount != null && (int)discount > 0) 
+                { <br /><br />
+                    <p style="color:red">Congratulations, you have been gifted a free coupon. You will recive a discount of $@discount on this purchase!!!</p>
+                } 
+               }
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Tax, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @*@{ int tax = (int)(Convert.ToInt32(amount) * 0.1);}
+            @tax*@
+            @{int tax = (int)(Convert.ToInt32(amount) * 0.1);}
+            @tax
+            @Html.Hidden("Tax", tax)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Total, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{int total = Convert.ToInt32(amount) - Convert.ToInt32(discount) + tax;}
+            @total
+            @Html.Hidden("Total", total)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PaymentDate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @{ var now = DateTime.Now;}
+            @now.ToString("dd/MM/yyyy")
+            @Html.Hidden("PaymentDate", now)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to My Cart", "MyCart", "Transaction")
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

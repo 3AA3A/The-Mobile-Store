@@ -1,0 +1,93 @@
+﻿@model IEnumerable<MobilesProject.Models.Review>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    if (User.Identity.Name != "admin@admin.com")
+    {
+        <h2>My Reviews/Feedbacks</h2>
+    }
+    else
+    {
+        <h2>Customer Reviews/Feedbacks</h2>
+    }
+}
+
+@{
+    if (User.Identity.Name != "admin@admin.com")
+    {
+        <p>
+            @Html.ActionLink("Leave a Review or Ask a question", "Create")
+        </p>
+    }
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @{
+                if (User.Identity.Name != "admin@admin.com")
+                {
+                    <span>My</span>
+                }
+            }
+            @Html.DisplayNameFor(model => model.Feedback)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reply)
+        </th>
+        <th>
+            @{
+                if (User.Identity.Name == "admin@admin.com")
+                {
+                    @Html.DisplayNameFor(model => model.Customer.Name)
+                }
+            }
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Feedback)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reply)
+            </td>
+            <td>
+                @{
+                    if (User.Identity.Name == "admin@admin.com")
+                    {
+                        @Html.DisplayFor(modelItem => item.Customer.Name)
+                    }
+                }
+            </td>
+            @{
+                if (User.Identity.Name.Equals("admin@admin.com"))
+                {
+                    <td>
+                        @Html.ActionLink("Add/Edit Reply", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                }
+            }
+        </tr>
+    }
+
+</table>

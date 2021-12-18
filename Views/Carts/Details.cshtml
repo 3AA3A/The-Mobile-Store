@@ -1,0 +1,94 @@
+﻿@model MobilesProject.Models.Cart
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-3" style="border:1px solid #dddddd; border-radius:.3em; padding:2%">
+            <h2 style="text-align:right">My Cart</h2>
+            <hr />
+            <p>Status: @Model.Status</p>
+            <p>Name: @Model.Customer.Name</p>
+            <hr />
+            <p>
+                @Html.ActionLink("View My Carts", "Index")
+            </p>
+            @if (Model.Status == "unpaid")
+            {
+                <h5>
+                    @Html.ActionLink("Check Out", "../Transaction/CheckOut", new { id = Model.Id })
+                    <p class="text-danger">@TempData["error"]</p>
+                </h5>
+            }
+        </div>
+
+        <div class="col-md-9" style="padding: 2%">
+            @{
+                if (ViewBag.supplier != null)
+                {
+                    string sitex = ViewBag.supplier.BrandImage + "";
+                    string siteo = sitex.Substring(0, sitex.IndexOf(".") + 1);
+                    string site = siteo + "com";
+                    string siteid = siteo + "co.in";
+                    if (siteo == "gionee.")
+                    {
+                        <a href="https://@siteid" target="_blank" style="float: right; display: inline-block;"> <span>(Ad:)</span> <img src="~/Content/Image/@ViewBag.supplier.BrandImage" width="100" height="100" /></a>
+                    }
+                    else
+                    {
+                        <a href="https://@site" target="_blank" style="float: right; display: inline-block;"> <span>(Ad:)</span> <img src="~/Content/Image/@ViewBag.supplier.BrandImage" width="100" height="100" /></a>
+                    }
+                }
+            }
+            <h2>Items</h2>
+            <table class="table">
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr>
+                @foreach (var item in Model.CartItems)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>
+                        <td>
+                            @{
+                                int amount = (int)item.Quantity * (int)item.Product.Price;
+                            }
+                            @amount
+                        </td>
+                        <td>
+                            @{
+                                if (Model.Status == "unpaid")
+                                {
+                                    <a class="btn btn-sm btn-danger" href="~/CartItems/Delete/@item.Id">X</a>
+                                }
+                            }
+                        </td>
+                    </tr>
+                }
+                <tr>
+                    <td colspan="2"></td>
+                    <th>Total</th>
+                    <td>@ViewBag.total</td>
+                </tr>
+            </table>
+
+
+            <a href="https://qatar.jazp.com/qa-en/mobile-accessories/sc/34" target="_blank" style="float: right; display: inline-block;">Need accessories to go with it, click this link for the best deals in town!!! </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+﻿@model MobilesProject.Models.CartItem
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CartItem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cart.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cart.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        @Html.Hidden("cartid", TempData["cartid"])
+
+<div class="form-actions no-color">
+    @{
+        if (Model.Cart.Status == "unpaid")
+        {
+            if (User.Identity.Name.Equals("admin@admin.com"))
+            {
+                <input type="submit" value="Delete" class="btn btn-default" /> <span>|</span>
+            }
+            else if (User.Identity.Name.Equals(Model.Cart.CustomerName))
+            {
+                <input type="submit" value="Delete" class="btn btn-default" /> <span>|</span>
+            }
+            else
+            {
+                <span class="text-danger">This is not an item of your cart!</span> <span>|</span>
+            }
+        }
+        else
+        {
+            <span class="text-danger">This cart is already paid!</span> <span>|</span>
+        }
+    }
+
+    @{
+        if (User.Identity.Name.Equals("admin@admin.com"))
+        {
+            @Html.ActionLink("Back to Cart", "Details", "CartsAdmin", new { id = TempData["cartid"] }, null)
+        }
+        else
+        {
+            @Html.ActionLink("Back to My Cart", "MyCart", "Transaction")
+        }
+    }
+</div>
+    }
+</div>

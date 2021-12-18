@@ -1,0 +1,192 @@
+﻿@model MobilesProject.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+@{string imglocc = @Html.DisplayFor(model => model.Supplier.BrandImage) + ".jpg";}
+@{string sitex = @Html.DisplayFor(model => model.Supplier.BrandImage) + ""; }
+@{string siteo = sitex.Substring(0, sitex.IndexOf(".") + 1); }
+@{string site = siteo + "com"; }
+@{string siteid = siteo + "co.in"; }
+
+<style>
+    /* width */
+    ::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+</style>
+
+@if (User.Identity.Name != "admin@admin.com")
+{
+    <div class="well">
+        
+                <h4>Search for another Product</h4>
+        @using (Html.BeginForm("Index", "Products"))
+        {
+            <div class="form-inline">
+                @Html.TextBox("productName", null, htmlAttributes: new { @class = "form-control", @placeholder = "Product Name", @style = "width:15%" })
+                @Html.DropDownList("productBrand", null, "Brand", htmlAttributes: new { @class = "form-control", @style = "width:10%"})
+                @Html.DropDownList("productType", null, "Type", htmlAttributes: new { @class = "form-control", @style = "width:12%" })
+                @Html.DropDownList("productOs", null, "OS", htmlAttributes: new { @class = "form-control", @style = "width:10%" })
+                @Html.DropDownList("productRam", null, "RAM", htmlAttributes: new { @class = "form-control", @style = "width:10%" })
+                @Html.DropDownList("productStorage", null, "Storage", htmlAttributes: new { @class = "form-control", @style = "width:10%" })
+                @Html.DropDownList("productCamera", null, "Camera", htmlAttributes: new { @class = "form-control", @style = "width:10%" })
+                @Html.DropDownList("productDisplay", null, "Display", htmlAttributes: new { @class = "form-control", @style = "width:13%" })
+                <input class="btn btn-info" type="submit" value="Search" />
+            </div>
+        }
+    </div>
+}
+
+<div class="container">
+    <h1>Product Details</h1>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-4" style="text-align:center;">
+            @{string imgloc = @Html.DisplayFor(model => model.Image) + ".jpg";}
+            <img src="~/Content/Image/@Html.DisplayFor(model => model.Image)" style="width:80%; margin-bottom:7%" /><br />
+
+            @if (User.Identity.IsAuthenticated && User.Identity.Name != "admin@admin.com")
+            {
+                <a class="btn btn-success" style="margin-bottom:2%" href="~/Transaction/Buy/@Model.Id"><i class="glyphicon glyphicon-shopping-cart"></i> &nbsp; Add to Cart</a>
+                using (Html.BeginForm("Index", "Products"))
+                {
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <button style="margin-bottom:2%" type="submit" value="id" class="btn  btn-primary"><i class="glyphicon glyphicon-heart-empty"></i> &nbsp; Add to Wishlist</button>
+                }
+            }
+        </div>
+
+        <div class="col-md-8">
+            <div class="well">
+                @{
+                    if (siteo == "gionee.")
+                    {
+                        <a href="https://@siteid" target="_blank" style="float: right; display: inline-block;"> <img src="~/Content/Image/@Html.DisplayFor(model => model.Supplier.BrandImage)" width="100" height="100" /></a>
+                    }
+                    else
+                    {
+                        <a href="https://@site" target="_blank" style="float: right; display: inline-block;"> <img src="~/Content/Image/@Html.DisplayFor(model => model.Supplier.BrandImage)" width="100" height="100" /></a>
+                    }
+                }
+                <h2>@Model.Name</h2>
+                <h4>Brand: @Model.Supplier.BrandName</h4>
+
+                <i style="padding-right:1%" class="glyphicon glyphicon-tags"></i>
+                <p class="badge">@Model.Category.Type</p>
+                <p class="badge">@Model.Category.OperatingSystem</p>
+
+                <h2 class="text-info">QAR @Model.Price</h2>
+
+                <h3 class="text-info"><i style="padding-right:1.5%" class="glyphicon glyphicon-info-sign"></i>Specs</h3>
+                <table class="table">
+                    <tr>
+                        <th>Camera</th>
+                        <td>@Model.Spec.Camera</td>
+                    </tr>
+                    <tr>
+                        <th>Display</th>
+                        <td>@Model.Spec.Display</td>
+                    </tr>
+                    <tr>
+                        <th>Memory</th>
+                        <td>@Model.Spec.Ram RAM</td>
+                    </tr>
+                    <tr>
+                        <th>Storage</th>
+                        <td>@Model.Spec.Storage</td>
+                    </tr>
+                    @if (ViewBag.colors != "")
+                    {
+                        <tr>
+                            <th>Colors</th>
+                            <td>@ViewBag.colors</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr>
+                            <th>Colors</th>
+                            <td>---</td>
+                        </tr>
+                    }
+                </table>
+
+                <a href="https://qatar.jazp.com/qa-en/mobile-accessories/sc/34" target="_blank">Need accessories to go with it, click this link for the best deals in town!!! </a>
+            </div>
+        </div>
+    </div>
+
+    @if (User.Identity.Name != "admin@admin.com")
+    {
+        if (ViewBag.count > 0)
+        {
+            <h3>More Products by @Model.Supplier.BrandName</h3>
+            <div class="row" style="overflow:auto; white-space:nowrap">
+                @foreach (var item in ViewBag.similar)
+                {
+                    <div class="well" style="width:30%; margin:1%; display:inline-flex; flex-wrap:wrap; flex-flow:row">
+                        <img src="~/Content/Image/@item.Image" style="width:100px; height:150px" /> &nbsp;
+                        <p style="text-wrap:normal; margin-left:3%">
+                            @item.Name<br />
+                            <span class="text-info">QAR @item.Price</span><br /><br />
+                            @Html.ActionLink("View", "Details", "Products", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-info" })
+                        </p>
+                    </div>
+                }
+            </div>
+        }
+        if (ViewBag.count2 > 0)
+        {
+            <h3>You Might Also Like</h3>
+            <div class="row" style="overflow:auto; white-space:nowrap">
+                @foreach (var item in ViewBag.similar2)
+                {
+                    <div class="well" style="width:30%; margin:1%; display:inline-flex; flex-wrap:wrap; flex-flow:row">
+                        <img src="~/Content/Image/@item.Image" style="width:100px; height:150px" /> &nbsp;
+                        <p style="text-wrap:normal; margin-left:3%">
+                            @item.Name<br />
+                            <span class="text-info">QAR @item.Price</span><br /><br />
+                            @Html.ActionLink("View", "Details", "Products", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-info" })
+                        </p>
+                    </div>
+                }
+            </div>
+        }
+    }
+</div>
+
+<br />
+
+<p>
+    @{
+        if (User.Identity.Name.Equals("admin@admin.com"))
+        {
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, htmlAttributes: new { @class = "btn btn-info" }) <span>|</span>
+        }
+    }
+    @if (User.Identity.Name == "admin@admin.com")
+    {
+        @Html.ActionLink("Back to List", "../Admin/Index")
+    }
+    else
+    {
+        @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-primary" })
+    }
+</p>

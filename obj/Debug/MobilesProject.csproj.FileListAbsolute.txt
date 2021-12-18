@@ -1,0 +1,324 @@
+C:\Users\Asus\Downloads\MobilesProject\bin\MobilesProject.dll.config
+C:\Users\Asus\Downloads\MobilesProject\bin\MobilesProject.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\MobilesProject.pdb
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\csc.exe
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\csc.exe.config
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\csc.rsp
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\csi.exe
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\csi.exe.config
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\csi.rsp
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.AppContext.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Console.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.IO.Compression.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Net.Http.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.ValueTuple.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\vbc.exe
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\vbc.exe.config
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\vbc.rsp
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\Asus\Downloads\MobilesProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Asus\Downloads\MobilesProject\bin\Antlr3.Runtime.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\EntityFramework.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\EntityFramework.SqlServer.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Security.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Newtonsoft.Json.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\Owin.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\System.Web.Helpers.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\System.Web.Mvc.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\System.Web.Optimization.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\System.Web.Razor.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\System.Web.WebPages.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\WebGrease.dll
+C:\Users\Asus\Downloads\MobilesProject\bin\EntityFramework.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\EntityFramework.SqlServer.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\System.Web.Helpers.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\System.Web.Mvc.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\System.Web.Optimization.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\System.Web.Razor.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\System.Web.WebPages.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\Newtonsoft.Json.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\Antlr3.Runtime.pdb
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Security.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Asus\Downloads\MobilesProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Asus\Downloads\MobilesProject\obj\Debug\MobilesProject.csprojAssemblyReference.cache
+C:\Users\Asus\Downloads\MobilesProject\obj\Debug\MobilesProject.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Downloads\MobilesProject\obj\Debug\MobilesProject.csproj.CopyComplete
+C:\Users\Asus\Downloads\MobilesProject\obj\Debug\MobilesProject.dll
+C:\Users\Asus\Downloads\MobilesProject\obj\Debug\MobilesProject.pdb
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\MobilesProject.dll.config
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\MobilesProject.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\MobilesProject.pdb
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\csc.exe
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\csc.exe.config
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\csc.rsp
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\csi.exe
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\csi.exe.config
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\csi.rsp
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\Microsoft.Managed.Core.targets
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.AppContext.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Collections.Immutable.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Console.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Globalization.Calendars.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.IO.Compression.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.IO.FileSystem.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Net.Http.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Net.Sockets.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Reflection.Metadata.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.ValueTuple.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Xml.XmlDocument.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Xml.XPath.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\vbc.exe
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\vbc.exe.config
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\vbc.rsp
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\VBCSCompiler.exe
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\roslyn\VBCSCompiler.exe.config
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Antlr3.Runtime.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\EntityFramework.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\EntityFramework.SqlServer.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.AspNet.Identity.Core.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Security.Cookies.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Security.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Security.Facebook.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Security.Google.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Security.OAuth.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Security.Twitter.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Web.Infrastructure.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Newtonsoft.Json.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Owin.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\System.Web.Helpers.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\System.Web.Mvc.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\System.Web.Optimization.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\System.Web.Razor.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\System.Web.WebPages.Deployment.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\System.Web.WebPages.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\System.Web.WebPages.Razor.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\WebGrease.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\EntityFramework.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\EntityFramework.SqlServer.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\System.Web.Helpers.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\System.Web.Mvc.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\System.Web.Optimization.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\System.Web.Razor.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\System.Web.WebPages.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\System.Web.WebPages.Deployment.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\System.Web.WebPages.Razor.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Newtonsoft.Json.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Antlr3.Runtime.pdb
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.AspNet.Identity.Core.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Security.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Security.Facebook.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Security.Cookies.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Security.Google.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Security.Twitter.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.Owin.Security.OAuth.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\obj\Debug\MobilesProject.csprojAssemblyReference.cache
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\obj\Debug\MobilesProject.csproj.CoreCompileInputs.cache
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\obj\Debug\MobilesProject.csproj.CopyComplete
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\obj\Debug\MobilesProject.dll
+D:\web3\Project\ProjectWebsite_UpdatedMarch12\ProjectWebsite_UpdatedMarch12\MobilesProject\obj\Debug\MobilesProject.pdb
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\MobilesProject.dll.config
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\MobilesProject.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\MobilesProject.pdb
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\csc.exe
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\csc.exe.config
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\csc.rsp
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\csi.exe
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\csi.exe.config
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\csi.rsp
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.AppContext.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Console.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.IO.Compression.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Net.Http.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Net.Sockets.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.ValueTuple.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Xml.XPath.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\vbc.exe
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\vbc.exe.config
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\vbc.rsp
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Antlr3.Runtime.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\EntityFramework.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\EntityFramework.SqlServer.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Security.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Newtonsoft.Json.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Owin.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\System.Web.Helpers.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\System.Web.Mvc.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\System.Web.Optimization.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\System.Web.Razor.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\System.Web.WebPages.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\WebGrease.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\EntityFramework.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\EntityFramework.SqlServer.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\System.Web.Helpers.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\System.Web.Mvc.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\System.Web.Optimization.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\System.Web.Razor.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\System.Web.WebPages.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Newtonsoft.Json.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Antlr3.Runtime.pdb
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Security.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\obj\Debug\MobilesProject.csprojAssemblyReference.cache
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\obj\Debug\MobilesProject.csproj.CoreCompileInputs.cache
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\obj\Debug\MobilesProject.csproj.CopyComplete
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\obj\Debug\MobilesProject.dll
+C:\Users\trini\Desktop\Woyk\Admission Docs\North\Interview\Projects\MobilesProject\obj\Debug\MobilesProject.pdb

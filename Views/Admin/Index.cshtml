@@ -1,0 +1,817 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="well">
+    <h1>View all Data</h1>
+    <h4 class="text-danger">@TempData["error"]</h4>
+    <h4 class="text-success">@TempData["confirm"]</h4>
+</div>
+
+<p>
+    @Html.ActionLink("Add a Product", "../Products/Create", null, htmlAttributes: new { @class = "btn btn-default btn-info" })
+    @Html.ActionLink("Add a Category", "../Categories/Create", null, htmlAttributes: new { @class = "btn btn-default btn-info" })
+    @Html.ActionLink("Add a Coupon", "../Coupons/Create", null, htmlAttributes: new { @class = "btn btn-default btn-info" })
+    @Html.ActionLink("Add a FAQ", "../Faqs/Create", null, htmlAttributes: new { @class = "btn btn-default btn-info" })
+    @Html.ActionLink("Add a Product Inventory", "../Inventories/Create", null, htmlAttributes: new { @class = "btn btn-default btn-info" })
+    @Html.ActionLink("Add Shipping", "../Shippings/Create", null, htmlAttributes: new { @class = "btn btn-default btn-info" })
+    @Html.ActionLink("Add Mobile Specs", "../Specs/Create", null, htmlAttributes: new { @class = "btn btn-default btn-info" })
+    @Html.ActionLink("Add a Supplier", "../Suppliers/Create", null, htmlAttributes: new { @class = "btn btn-default btn-info" })
+</p>
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#products">Products</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#carts">Carts</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#customers">Customers</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#categories">Categories</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#coupons">Coupons</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#dels">Deliveries</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#faqs">FAQs</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#histories">Histories</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#inventories">Inventories</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#payments">Payments</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#reviews">Reviews</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#shippings">Shippings</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#specs">Specs</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#suppliers">Suppliers</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#wishlists">Wishlists</a>
+    </li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade" id="products">
+        @using (Html.BeginForm())
+        {
+            <div class="well">
+                <h2>Search by:</h2>
+                @Html.TextBox("prodname", null, htmlAttributes: new { placeholder = "Name" }) &nbsp;
+                @Html.DropDownList("prodbrand", null, "Brand", null) &nbsp;
+                @Html.DropDownList("prodtype", null, "Type", null) &nbsp;
+                @Html.DropDownList("prodos", null, "Operating System", null) &nbsp;
+                @Html.DropDownList("prodres", null, "Resolution", null) &nbsp;
+                @Html.DropDownList("prodram", null, "RAM", null) &nbsp;
+                @Html.DropDownList("prodstorage", null, "Storage", null) &nbsp;
+                @Html.DropDownList("prodcamera", null, "Camera", null) &nbsp;
+                @Html.DropDownList("proddisplay", null, "Display", null) &nbsp;
+                <br /> <br />
+                <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+                <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+            </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Brand</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Products)
+            {
+                <tr>
+                    <td>
+                        @{string imgloc = item.Image;}
+                        <img src="~/Content/Image/@imgloc" width="100" height="150" />
+                    </td>
+                    <td>@item.Name</td>
+                    <td>@item.Price</td>
+                    <td>@item.Supplier.BrandName</td>
+                    <td>
+                        <a class="btn btn-sm btn-default" href="~/Products/Delete/@item.Id">Delete</a>
+                        <a class="btn btn-sm btn-default" href="~/Products/Edit/@item.Id">Edit</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="carts">
+        @using (Html.BeginForm())
+        {
+            <div class="well">
+                <h2>Search by:</h2>
+                @Html.TextBox("cartname", null, htmlAttributes: new { placeholder = "Name" }) &nbsp;
+                @{
+                    List<string> cartstatuses = new List<string> { "unpaid", "paid", "shipped" };
+                }
+                @Html.DropDownList("cartstat", new SelectList(cartstatuses), "Status", null) &nbsp;
+                <br /> <br />
+                <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+                <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+            </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th>ID</th>
+                <th>Status</th>
+                <th>Customer</th>
+                <th>Amount</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Carts)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Status</td>
+                    <td>@item.Customer.Name</td>
+                    <td>
+                        @{
+                            int total = 0;
+                            foreach (var i in item.CartItems)
+                            {
+                                total = total + i.Quantity * i.Product.Price;
+                            }
+                        }
+                        @total
+                    </td>
+                    <td>
+                        @{
+                            if (item.Status.Equals("paid"))
+                            {
+                                @Html.ActionLink("Deliver/Ship", "../CartsAdmin/DeliveryShip", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                            }
+                        }
+                        @{
+                            if (item.Status != "unpaid")
+                            {
+                                @Html.ActionLink("Payment Details", "../Carts/PaymentDetails", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                            }
+                        }
+                        @Html.ActionLink("Edit", "../CartsAdmin/Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Details", "../CartsAdmin/Details", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Delete", "../CartsAdmin/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="customers">
+        @using (Html.BeginForm())
+        {
+            <div class="well">
+                <h2>Search by:</h2>
+                @Html.TextBox("customername", null, htmlAttributes: new { placeholder = "Name" }) &nbsp;
+                @Html.TextBox("customeradd", null, htmlAttributes: new { placeholder = "Address" }) &nbsp;
+                <br /> <br />
+                <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+                <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+            </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Customers)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Address</td>
+                    <td>@item.Phone</td>
+                    <td>
+                        @Html.ActionLink("Edit", "../Customers/Edit", new { id = item.UserName + "/" }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Details", "../Customers/Details", new { id = item.UserName + "/" }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Delete", "../Customers/Delete", new { id = item.UserName + "/" }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="categories">
+        @using (Html.BeginForm())
+        {
+            <div class="well">
+                <h2>Search by:</h2>
+                @Html.DropDownList("categtype", null, "Type", null) &nbsp;
+                @Html.DropDownList("categos", null, "Operating System", null) &nbsp;
+                @Html.DropDownList("categres", null, "Resolution", null) &nbsp;
+                <br /> <br />
+                <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+                <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+            </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Operating System</th>
+                <th>Resolution</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Categories)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Type</td>
+                    <td>@item.OperatingSystem</td>
+                    <td>@item.Resolution</td>
+                    <td>
+                        @Html.ActionLink("Edit", "../Categories/Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Details", "../Categories/Details", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Delete", "../Categories/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="coupons">
+        @using (Html.BeginForm())
+        {
+            <div class="well">
+                <h2>Search by:</h2>
+                @Html.TextBox("coupcode", null, htmlAttributes: new { placeholder = "Code" }) &nbsp;
+                @Html.TextBox("coupcustom", null, htmlAttributes: new { placeholder = "Customer" }) &nbsp;
+                <span>Discount:</span>
+                @Html.TextBox("coupfrom", null, htmlAttributes: new { placeholder = "From", type = "number" })
+                @Html.TextBox("coupto", null, htmlAttributes: new { placeholder = "To", type = "number" }) &nbsp;
+                @{
+                    List<string> coupstatuses = new List<string> { "Active", "Void" };
+                }
+                @Html.DropDownList("coupstat", new SelectList(coupstatuses), "Status", null) &nbsp;
+                <br /> <br />
+                <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+                <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+            </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th>Code</th>
+                <th>Customer</th>
+                <th>Discount</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Coupons)
+            {
+                <tr>
+                    <td>@item.Code</td>
+                    <td>@item.CustomerName</td>
+                    <td>@item.Discount</td>
+                    <td>@item.Status</td>
+                    <td>
+                        @Html.ActionLink("Edit", "../Coupons/Edit", new { id = item.Code }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Details", "../Coupons/Details", new { id = item.Code }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Delete", "../Coupons/Delete", new { id = item.Code }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="dels">
+        @using (Html.BeginForm())
+        {
+            <div class="well">
+                <h2>Search by:</h2>
+                @{
+                    List<string> deltypes = new List<string> { "Air", "Sea", "Road" };
+                }
+                @Html.DropDownList("deltype", new SelectList(deltypes), "Type", null) &nbsp;
+                @{
+                    List<string> delstatuses = new List<string> { "Confirmed", "Cancelled" };
+                }
+                @Html.DropDownList("delstat", new SelectList(delstatuses), "Status", null) &nbsp;
+                @Html.TextBox("delcustom", null, htmlAttributes: new { placeholder = "Customer" }) &nbsp;
+                @Html.DropDownList("delcar", null, "Carrier", null) &nbsp;
+                <br /> <br />
+                <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+                <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+            </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Customer</th>
+                <th>ID</th>
+                <th>Carrier</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Deliveries)
+            {
+                <tr>
+                    <td>@item.Type</td>
+                    <td>@item.Status</td>
+                    <td>@item.Cart.Customer.Name</td>
+                    <td>@item.Cart.Id</td>
+                    <td>@item.Shipping.ShippingCarrier</td>
+                    <td>
+                        @Html.ActionLink("Edit", "../Deliveries/Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Details", "../Deliveries/Details", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Delete", "../Deliveries/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="faqs">
+        @using (Html.BeginForm())
+        {
+            <div class="well">
+                <h2>Search by:</h2>
+                @Html.DropDownList("faqcateg", null, "Category", null) &nbsp;
+                @Html.TextBox("faqquest", null, htmlAttributes: new { placeholder = "Question" }) &nbsp;
+                <br /> <br />
+                <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+                <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+            </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th>Category</th>
+                <th>Question</th>
+                <th>Answer</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Faqs)
+            {
+                <tr>
+                    <td>@item.Category</td>
+                    <td>@item.Question</td>
+                    <td>@item.Answer</td>
+                    <td>
+                        @Html.ActionLink("Edit", "../Faqs/Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Delete", "../Faqs/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="histories">
+        @using (Html.BeginForm())
+        {
+            <div class="well">
+                <h2>Search by:</h2>
+                @Html.TextBox("histoprod", null, htmlAttributes: new { placeholder = "Product" }) &nbsp;
+                @Html.TextBox("histocust", null, htmlAttributes: new { placeholder = "Customer" }) &nbsp;
+                <br /> <br />
+                <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+                <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+            </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th>Product</th>
+                <th>Viewed by</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Histories)
+            {
+                <tr>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Customer.Name</td>
+                    <td>
+                        @Html.ActionLink("Delete", "../Histories/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="inventories">
+        @using (Html.BeginForm())
+        {
+            <div class="well">
+                <h2>Search by:</h2>
+                @Html.TextBox("invenprod", null, htmlAttributes: new { placeholder = "Product" }) &nbsp;
+                @Html.DropDownList("invencolor", null, "Color", null) &nbsp;
+                <span>Quantity:</span>
+                @Html.TextBox("invenfrom", null, htmlAttributes: new { placeholder = "From", type = "number" })
+                @Html.TextBox("invento", null, htmlAttributes: new { placeholder = "To", type = "number" }) &nbsp;
+                <br /> <br />
+                <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+                <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+            </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th>Product</th>
+                <th>Color</th>
+                <th>Quantity</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Inventories)
+            {
+                <tr>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Color</td>
+                    <td>@item.Amount</td>
+                    <td>
+                        @Html.ActionLink("Edit", "../Inventories/Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Details", "../Inventories/Details", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Delete", "../Inventories/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="payments">
+        @using (Html.BeginForm())
+        {
+            <div class="well">
+                <h2>Search by:</h2>
+                @{
+                    List<string> paytypes = new List<string> { "Check", "CreditCard" };
+                }
+                @Html.DropDownList("paytype", new SelectList(paytypes), "Type", null) &nbsp;
+                <span>Amount:</span>
+                @Html.TextBox("payamountfrom", null, htmlAttributes: new { placeholder = "From", type = "number" })
+                @Html.TextBox("payamountto", null, htmlAttributes: new { placeholder = "To", type = "number" }) &nbsp;
+                <span>Discount:</span>
+                @Html.TextBox("paydiscfrom", null, htmlAttributes: new { placeholder = "From", type = "number" })
+                @Html.TextBox("paydiscto", null, htmlAttributes: new { placeholder = "To", type = "number" }) &nbsp;
+                <br />
+                <span>Tax:</span>
+                @Html.TextBox("paytaxfrom", null, htmlAttributes: new { placeholder = "From", type = "number" })
+                @Html.TextBox("paytaxto", null, htmlAttributes: new { placeholder = "To", type = "number" }) &nbsp;
+                <span>Total:</span>
+                @Html.TextBox("paytotalfrom", null, htmlAttributes: new { placeholder = "From", type = "number" })
+                @Html.TextBox("paytotalto", null, htmlAttributes: new { placeholder = "To", type = "number" }) &nbsp;
+                <br />
+                <span>Payment Date:</span>
+                <span>From</span>
+                <input type="date" name="paydatefrom">
+                <span>To</span>
+                <input type="date" name="paydateto"> &nbsp;
+                @Html.TextBox("paycustom", null, htmlAttributes: new { placeholder = "Customer" }) &nbsp;
+                @Html.TextBox("paycart", null, htmlAttributes: new { placeholder = "Cart", type = "number" })
+                <br /> <br />
+                <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+                <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+            </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Discount</th>
+                <th>Tax</th>
+                <th>Total</th>
+                <th>Payment Date</th>
+                <th>Customer</th>
+                <th>Cart ID</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Payments)
+            {
+                <tr>
+                    <td>@item.Type</td>
+                    <td>@item.Amount</td>
+                    <td>@item.Discount</td>
+                    <td>@item.Tax</td>
+                    <td>@item.Total</td>
+                    <td>@item.PaymentDate.ToLongDateString()</td>
+                    <td>@item.Cart.Customer.Name</td>
+                    <td>@item.CartId</td>
+                    <td>
+                        @Html.ActionLink("Details", "../Payments/Details", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Delete", "../Payments/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="reviews">
+        @using (Html.BeginForm())
+        {
+            <div class="well">
+                <h2>Search by:</h2>
+                <span>Review Date:</span>
+                <span>From</span>
+                <input type="date" name="revdatefrom">
+                <span>To</span>
+                <input type="date" name="revdateto"> &nbsp;
+                @Html.TextBox("revcustom", null, htmlAttributes: new { placeholder = "Customer" }) &nbsp;
+                @Html.TextBox("revtitle", null, htmlAttributes: new { placeholder = "Title" }) &nbsp;
+                @Html.TextBox("revfeed", null, htmlAttributes: new { placeholder = "Feedback" }) &nbsp;
+                <br /> <br />
+                <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+                <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+            </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th>Date</th>
+                <th>Customer</th>
+                <th>Title</th>
+                <th>Feedback</th>
+                <th>Site's Reply</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Reviews)
+            {
+                <tr>
+                    <td>@item.Date.ToLongDateString()</td>
+                    <td>@item.Customer.Name</td>
+                    <td>@item.Title</td>
+                    <td>@item.Feedback</td>
+                    <td>@item.Reply</td>
+                    <td>
+                        @Html.ActionLink("Add/Edit Reply", "../Reviews/Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Delete", "../Reviews/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="shippings">
+        @using (Html.BeginForm())
+        {
+        <div class="well">
+            <h2>Search by:</h2>
+            @Html.DropDownList("shipcar", null, "Carrier", null) &nbsp;
+            @Html.TextBox("shiploc", null, htmlAttributes: new { placeholder = "Location" }) &nbsp;
+            @{
+                List<string> shipstatuses = new List<string> { "Arrived", "Cancelled", "Ongoing", "Tracking" };
+            }
+            @Html.DropDownList("shipstat", new SelectList(shipstatuses), "Status", null) &nbsp;
+            <br />
+            <span>Expected Date:</span>
+            <span>From</span>
+            <input type="date" name="shipexpfrom">
+            <span>To</span>
+            <input type="date" name="shipexpto"> &nbsp;
+            <span>Arrival Date:</span>
+            <span>From</span>
+            <input type="date" name="shiparrfrom">
+            <span>To</span>
+            <input type="date" name="shiparrto"> &nbsp;
+            <br /> <br />
+            <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+            <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+        </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th>ID</th>
+                <th>Carrier</th>
+                <th>Shipping Cost</th>
+                <th>Expected Date</th>
+                <th>Arrival Date</th>
+                <th>Location</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Shippings)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.ShippingCarrier</td>
+                    <td>@item.ShippingCost</td>
+                    <td>
+                        @{
+                            if (item.ExpectedDate != null)
+                            {
+                                @item.ExpectedDate.ToLongDateString()
+                            }
+                        }
+                    </td>
+                    <td>
+                        @{
+                            if (item.ArrivalDate != null)
+                            {
+                                @item.ArrivalDate.ToLongDateString()
+                            }
+                        }
+                    </td>
+                    <td>@item.Location</td>
+                    <td>@item.Status</td>
+                    <td>
+                        @Html.ActionLink("Edit", "../Shippings/Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Details", "../Shippings/Details", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Delete", "../Shippings/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="specs">
+        @using (Html.BeginForm())
+        {
+            <div class="well">
+                <h2>Search by:</h2>
+                @Html.DropDownList("specram", null, "RAM", null) &nbsp;
+                @Html.DropDownList("specstorage", null, "Storage", null) &nbsp;
+                @Html.DropDownList("speccamera", null, "Camera", null) &nbsp;
+                @Html.DropDownList("specdisplay", null, "Display", null) &nbsp;
+                <br /> <br />
+                <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+                <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+            </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th>ID</th>
+                <th>RAM</th>
+                <th>Storage</th>
+                <th>Camera</th>
+                <th>Display</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Specs)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Ram</td>
+                    <td>@item.Storage</td>
+                    <td>@item.Camera</td>
+                    <td>@item.Display</td>
+                    <td>
+                        @Html.ActionLink("Edit", "../Specs/Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Details", "../Specs/Details", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Delete", "../Specs/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="suppliers">
+        @using (Html.BeginForm())
+        {
+            <div class="well">
+                <h2>Search by:</h2>
+                @Html.TextBox("suppbrand", null, htmlAttributes: new { placeholder = "Brand" }) &nbsp;
+                <br /> <br />
+                <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+                <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+            </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th></th>
+                <th>Brand</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Suppliers)
+            {
+                <tr>
+                    <td>
+                        @{string imgloc = item.BrandImage;}
+                        <img src="~/Content/Image/@imgloc" width="150" height="150" />
+                    </td>
+                    <td>@item.BrandName</td>
+                    <td>
+                        @Html.ActionLink("Edit", "../Suppliers/Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Details", "../Suppliers/Details", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Delete", "../Suppliers/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="wishlists">
+        @using (Html.BeginForm())
+        {
+            <div class="well">
+                <h2>Search by:</h2>
+                @Html.TextBox("wishprod", null, htmlAttributes: new { placeholder = "Product" }) &nbsp;
+                @Html.TextBox("wishcust", null, htmlAttributes: new { placeholder = "Customer" }) &nbsp;
+                <br /> <br />
+                <input class="btn btn-primary btn-sm" type="submit" value="Search" />
+                <a class="btn btn-warning btn-sm" href="~/Admin">Reset</a>
+            </div>
+        }
+        <table class="table table-striped">
+            <tr>
+                <th></th>
+                <th>Product</th>
+                <th>Customer</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Wishlists)
+            {
+                <tr>
+                    <td>
+                        @{string imgloc = item.Product.Image;}
+                        <img src="~/Content/Image/@imgloc" width="100" height="150" />
+                    </td>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Customer.Name</td>
+                    <td>
+                        @Html.ActionLink("Remove From Wishlist", "../Wishlists/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+@*
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#specs">Specs</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#suppliers">Suppliers</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#wishlists">Wishlists</a>
+    </li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade" id="specs">
+        <table class="table table-striped">
+            <tr>
+                <th>ID</th>
+                <th>RAM</th>
+                <th>Storage</th>
+                <th>Camera</th>
+                <th>Display</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Specs)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Ram</td>
+                    <td>@item.Storage</td>
+                    <td>@item.Camera</td>
+                    <td>@item.Display</td>
+                    <td>
+                        @Html.ActionLink("Edit", "../Specs/Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Details", "../Specs/Details", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Delete", "../Specs/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="suppliers">
+        <table class="table table-striped">
+            <tr>
+                <th></th>
+                <th>Brand</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.Suppliers)
+            {
+                <tr>
+                    <td>
+                        @{string imgloc = item.BrandImage;}
+                        <img src="~/Content/Image/@imgloc" width="150" height="150" />
+                    </td>
+                    <td>@item.BrandName</td>
+                    <td>
+                        @Html.ActionLink("Edit", "../Suppliers/Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Details", "../Suppliers/Details", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                        @Html.ActionLink("Delete", "../Suppliers/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="tab-pane fade" id="wishlists">
+        <table class="table table-striped">
+            <tr>
+                <th></th>
+                <th>Product</th>
+                <th>Customer</th>
+                <th></th>
+            </tr>
+            @foreach(var item in ViewBag.Wishlists)
+            {
+                <tr>
+                    <td>
+                        @{string imgloc = item.Product.Image;}
+                        <img src="~/Content/Image/@imgloc" width="100" height="150" />
+                    </td>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Customer.Name</td>
+                    <td>
+                        @Html.ActionLink("Remove From Wishlist", "../Wishlists/Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-sm btn-default" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+    *@

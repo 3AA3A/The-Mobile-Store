@@ -1,0 +1,202 @@
+﻿@model IEnumerable<MobilesProject.Models.Product>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>The Mobile Company</h1>
+    <p class="lead">The online store for affordable and high-quality mobiles, phones, and tablets!</p>
+    <p><a href="~/Products" class="btn btn-primary btn-lg">Start Shopping</a></p>
+</div>
+
+<h2 class="text-center">Featured Mobiles</h2>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 70%; margin:auto;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="~/Content/Image/@ViewBag.feat1.Image" width="30%" />
+            <div class="carousel-caption">
+                <a href="~/Products/Details/@ViewBag.feat1.Id">
+                    <h3 class="pull-right text-success">@ViewBag.feat1.Name</h3>
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/Content/Image/@ViewBag.feat2.Image" width="30%" />
+            <div class="carousel-caption">
+                <a href="~/Products/Details/@ViewBag.feat2.Id">
+                    <h3 class="pull-right text-success">@ViewBag.feat2.Name</h3>
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/Content/Image/@ViewBag.feat3.Image" width="30%" />
+            <div class="carousel-caption">
+                <a href="~/Products/Details/@ViewBag.feat3.Id">
+                    <h3 class="pull-right text-success">@ViewBag.feat3.Name</h3>
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/Content/Image/@ViewBag.feat4.Image" width="30%" />
+            <div class="carousel-caption">
+                <a href="~/Products/Details/@ViewBag.feat4.Id">
+                    <h3 class="pull-right text-success">@ViewBag.feat4.Name</h3>
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/Content/Image/@ViewBag.feat5.Image" width="30%" />
+            <div class="carousel-caption">
+                <a href="~/Products/Details/@ViewBag.feat5.Id">
+                    <h3 class="pull-right text-success">@ViewBag.feat5.Name</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <h1>Our Products</h1>
+
+    <div class="row">
+        <div class="col-md-3">
+            <h2>Search</h2>
+            <hr />
+            @using (Html.BeginForm())
+            {
+                <p>
+                    <input class="btn btn-info" type="submit" value="Filter" />
+                    <a href="/Home" class="btn btn-warning">Reset</a>
+                </p>
+                if (!String.IsNullOrEmpty(ViewBag.filters))
+                {
+                    <p class="text-muted">Filter(s): @ViewBag.filters</p>
+                }
+
+                <h3>Products</h3>
+                <dt>@Html.Label("productName", "Name")</dt>
+                <dd>@Html.TextBox("productName", null, htmlAttributes: new { @class = "form-control" })</dd>
+                <dt>@Html.Label("productBrand", "Brand")</dt>
+                <dd>@Html.DropDownList("productBrand", null, "All", htmlAttributes: new { @class = "form-control" })</dd>
+
+                <h3>Categories</h3>
+                <h4>Type</h4>
+                foreach (var item in ViewBag.productType)
+                {
+                    <p><input type="radio" name="productType" value="@item" /> @item</p>
+                }
+                <h4>Operating System</h4>
+                foreach (var item in ViewBag.productOs)
+                {
+                    <p><input type="radio" name="productOs" value="@item" /> @item</p>
+                }
+
+                <h3>Specifications</h3>
+                <h4>Memory (RAM)</h4>
+                foreach (var item in ViewBag.productRam)
+                {
+                    <p><input type="radio" name="productRam" value="@item" /> @item</p>
+                }
+                <h4>Storage</h4>
+                foreach (var item in ViewBag.productStorage)
+                {
+                    <p><input type="radio" name="productStorage" value="@item" /> @item</p>
+                }
+                <h4>Camera</h4>
+                foreach (var item in ViewBag.productCamera)
+                {
+                    <p><input type="radio" name="productCamera" value="@item" /> @item</p>
+                }
+                <h4>Display</h4>
+                foreach (var item in ViewBag.productDisplay)
+                {
+                    <p><input type="radio" name="productDisplay" value="@item" /> @item</p>
+                }
+
+                <p>
+                    <input class="btn btn-info" type="submit" value="Filter" />
+                    <a href="/Home" class="btn btn-warning">Reset</a>
+                </p>
+            }
+
+            <hr />
+            <h2>Related Sites</h2>
+            <hr />
+            <p> <a href="https://www.ubuy.qa/en/category-list/mobile-tab/id-2335752011" target="_blank"> <img src="~/Content/Image/ubuy.jpg" width="100" height="100" /> Ubuy Electronics</a></p>
+            <p> <a href="https://www.luluhypermarket.com/en-qa/department-store-mobiles-mobiles-tablets-mobile-accessories/c/HY00214732" target="_blank"> <img src="~/Content/Image/lulu.png" width="100" height="100" /> Lulu Mobiles</a></p>
+            <p> <a href="https://www.carrefourqatar.com/mafqat/en/smartphones-tablets-wearables/mobile-accessories/phone-holders-accessories/c/NFQAT1210600?currentPage=0&filter=&nextPageOffset=0&pageSize=60&sortBy=relevance" target="_blank"> <img src="~/Content/Image/carefour.jpg" width="100" height="100" /> CarreFour Tablets</a></p>
+            <p> <a href="https://alaneesqatar.qa/product-category/accessories/" target="_blank"> <img src="~/Content/Image/alnass.png" width="100" height="100" /> Al-Anees Qatar Accessories</a></p>
+            <p> <a href="https://www.qatar.ourshopee.com/products-category/Mobile-Accessories/" target="_blank"> <img src="~/Content/Image/shopee.png" width="100" height="100" /> Our Shopee Devices</a></p>
+            <p> <a href="https://www.starlink.qa/collections/accessories" target="_blank"> <img src="~/Content/Image/starlink.jpg" width="100" height="100" /> StarLink Entertainment</a></p>
+
+        </div>
+        <div class="col-md-9">
+            @if (Model.Count() > 0)
+            {
+                <table class="table table-hover table-striped">
+                    <tr>
+                        <th></th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @{string imgloc = @Html.DisplayFor(modelItem => item.Image) + ".jpg";}
+                                <img src="~/Content/Image/@Html.DisplayFor(modelItem => item.Image)" width="100" height="150" />
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                            <td>
+                                @{string username = User.Identity.Name;}
+                                @{
+                                    if (User.Identity.IsAuthenticated && username != "admin@admin.com")
+                                    {
+                                        using (Html.BeginForm())
+                                        {
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                            <button type="submit" value="id" class="btn btn-primary">Add to Wishlist <img src="~/Content/Image/fav.jpg" width="30" height="30" /></button>
+                                        }
+                                    }
+                                }
+                                <a class="btn btn-info" href="~/Products/Details/@item.Id">Details</a>
+                                @if (User.Identity.IsAuthenticated && User.Identity.Name != "admin@admin.com")
+                                {
+                                    <a class="btn btn-success" href="~/Transaction/Buy/@item.Id">Buy</a>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>No products found!</p>
+            }
+        </div>
+    </div>
